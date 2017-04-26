@@ -1,0 +1,7 @@
+from rdoclient import RandomOrgClient
+r = RandomOrgClient('4a6191cc-afef-4d98-866e-8b364fa2bd35')
+
+#create two big random numbers p & q
+# mod = p*q
+# phy = (p-1)*(q-1)
+# privatekey = publishkey.modInverse(phi)
