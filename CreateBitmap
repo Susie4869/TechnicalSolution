@@ -1,0 +1,20 @@
+from PIL import Image
+from rdoclient import RandomOrgClient
+r = RandomOrgClient('4a6191cc-afef-4d98-866e-8b364fa2bd35')
+
+x = r.generate_integers(64*64,0,255)
+y = r.generate_integers(64*64,0,255)
+z = r.generate_integers(64*64,0,255)
+
+data = []
+
+i = 0
+while i<64*64:
+    data.append((x[i],y[i],z[i]))
+    i+=1
+print(len(data))
+size = 64,64
+img = Image.new('RGB',size) 
+img.putdata(data)
+img.show()             
+img.save('Image.bmp')
