@@ -1,0 +1,14 @@
+import matplotlib.pyplot as plt
+from rdoclient import RandomOrgClient
+
+
+r = RandomOrgClient('4a6191cc-afef-4d98-866e-8b364fa2bd35')
+
+mean = 0
+std = 1 
+num_samples = 1000
+samples = r.generate_gaussians(1000, mean, std,3)
+
+
+plt.plot(samples)
+plt.show()
